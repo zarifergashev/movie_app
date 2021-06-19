@@ -14,7 +14,7 @@ import uz.zarifergashev.movietestapp.models.PagingResult
 import java.util.concurrent.TimeUnit
 
 interface MovieApi {
-    @GET("/search/search-movies")
+    @GET("search/movie")
     suspend fun searchMovies(
         @Query("query") query: String,
         @Query("page") page: Int,
@@ -31,7 +31,7 @@ interface MovieApi {
 
         private fun createInstance(): MovieApi {
             val logging = HttpLoggingInterceptor()
-            logging.setLevel(HttpLoggingInterceptor.Level.HEADERS)
+            logging.setLevel(HttpLoggingInterceptor.Level.BODY)
 
             val client = OkHttpClient.Builder()
                 .addInterceptor(logging)

@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="60dp">
 
-    <TextView
-        android:id="@+id/pagination_footer_tv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="?android:attr/selectableItemBackground"
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/pagination_footer_reload_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/refresh_btn_bg"
         android:gravity="center"
+        android:padding="16dp"
+        android:src="@drawable/ic_baseline_refresh_24"
         android:text="@string/pagination_footer_text" />
 
-    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+    <ProgressBar
         android:id="@+id/pagination_footer_progress_bar"
-        style="@style/Widget.MaterialProgressBar.ProgressBar.Small"
+        style="@style/Widget.MaterialComponents.CircularProgressIndicator"
         android:layout_width="38dp"
         android:layout_height="38dp"
         android:layout_centerInParent="true"
-        android:indeterminate="true"
-        app:mpb_progressStyle="circular" />
+        android:indeterminate="true" />
 </RelativeLayout>

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Movie Test App</string>
     <string name="pagination_footer_text">Load more</string>
+    <string name="nothing_not_found">Your search - %1$s - did not match any documents.</string>
 </resources>
